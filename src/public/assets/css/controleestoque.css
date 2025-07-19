@@ -1,0 +1,69 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+.navbar {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav-link {
+  color: #000 !important;
+}
+
+.estoque-card {
+  border-left: 6px solid #198754; 
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: #198754;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-box img {
+  width: 24px;
+  filter: invert(1);
+}
+
+footer {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+footer .nav-link {
+  color: #ffffff !important;
+}
+
+
+[data-bs-theme="dark"] footer {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] footer .nav-link {
+  color: #ffffff !important;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .card-body .d-flex:last-child {
+    align-self: flex-end;
+  }
+}

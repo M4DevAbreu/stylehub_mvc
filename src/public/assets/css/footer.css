@@ -1,0 +1,59 @@
+/* Reset básico */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estrutura principal da página */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Footer base */
+.footer {
+  background-color: var(--footer-bg, #1e1e1e);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #00c781;
+}
+
+/* Lista de links */
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista a {
+  font-weight: 500;
+}
+
+/* Linha divisória */
+.footer-divider {
+  width: 100%;
+  border-top: 1px solid #444;
+  margin: 2rem 0;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .lista {
+    flex-direction: column !important;
+    align-items: center;
+  }
+}

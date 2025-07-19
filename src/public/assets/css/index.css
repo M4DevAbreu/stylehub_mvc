@@ -1,0 +1,156 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
+.featurette-heading {
+  letter-spacing: -.05rem;
+}
+
+.featurette-heading {
+  font-size: 50px;
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+/* rtl:end:remove */
+
+
+/* BANNER STYLES (Responsivo)
+-------------------------------------------------- */
+
+.titulo {
+  padding-top: 250px;
+  color: #00c781;
+  font-family: 'Bebas';
+  font-size: 80px;
+}
+
+.subtitulo {
+  font-family: 'Regular Brush';
+  font-size: 60px;
+}
+
+.conhecendo {
+  color: #00c781;
+}
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+
+/* Responsivo para tablets */
+@media (max-width: 768px) {
+ .titulo {
+    font-size: 40px;
+    padding-top: 180px;
+  }
+
+  .subtitulo {
+    font-size: 25px;
+  }
+  .imgsobre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+  .titulo {
+  padding-top: 80px;
+  color: #00c781;
+  font-family: 'Bebas';
+  font-size: 20px;
+}
+
+  .subtitulo {
+    font-size: 15px;
+  }
+  .carousel-item {
+  height: 20rem;
+  }
+  .imgsobre{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+}
+
+@media (min-width: 480px) {
+
+}
+
+
+
+@media (min-width: 1024px) {
+  .Banner {
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+}
+.depoimentoClientes{
+  margin-top: 35px;
+ 
+}
+
+}
+
+@media (max-width: 1024px) {
+
+  
+}
+
+

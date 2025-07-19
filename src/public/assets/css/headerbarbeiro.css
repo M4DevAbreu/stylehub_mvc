@@ -1,0 +1,109 @@
+.navbar {
+  display: flex;
+  justify-content: center; /* Centraliza os itens do menu horizontalmente */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  border-bottom: 2px solid #000000; /* Linha verde para destacar */
+  background-color: #000000; /* Fundo preto para o header */
+}
+
+/* Estilos para os itens do menu (nav-links) */
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+  gap: 2rem; /* Espaçamento entre os itens do menu */
+}
+
+/* Estilo para os links do menu */
+.nav-link {
+  color: #000000 !important; /* Cor verde para texto dos links */
+  font-weight: 600;
+  text-decoration: none; /* Remove o sublinhado */
+  padding: 0.1rem 0.1rem !important; /* Ajusta o padding dentro dos links */
+}
+
+/* Estilo para o hover dos links */
+.nav-link:hover {
+  color: #00E997 !important; /* Cor branca ao passar o mouse */
+  text-decoration: underline; /* Sublinha no hover */
+}
+
+/* Estilos para os botões Login e Sign-up */
+.btn-stylehub {
+  background-color: #00E997 !important; /* Cor de fundo do botão */
+  color: #000 !important; /* Cor do texto */
+  border: none !important; /* Sem borda */
+  padding: 0.5rem 1rem !important; /* Espaçamento interno */
+  border-radius: 8px !important; /* Borda arredondada */
+  font-weight: 600 !important; /* Peso da fonte */
+  transition: all 0.3s ease !important; /* Efeito suave de transição */
+}
+
+.btn-stylehub:hover {
+  background-color: #000 !important; /* Cor de fundo no hover */
+  color: #00E997 !important; /* Cor do texto no hover */
+}
+
+/* Flexbox: no mobile, os botões ocupam a largura total */
+@media (max-width: 575px) {
+  .btn-stylehub {
+    width: 100% !important; /* Botões ocupam 100% da largura no mobile */
+  }
+}
+
+  .li > a {
+    margin-right: 2rem;
+  }
+
+
+/* No desktop, os botões ficam lado a lado */
+@media (min-width: 576px) {
+  .btn-stylehub {
+    width: auto !important; /* Largura ajustada automaticamente no desktop */
+  }
+  .links a {
+    margin-right: 2rem;
+  }
+
+  
+}
+
+/* No mobile, diminui o espaço vertical entre os itens do menu */
+@media (max-width: 575px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    gap: 0.25rem; /* Reduz a distância vertical entre os itens do menu */
+  }
+
+  .nav-link {
+    padding: 0.25rem 0.5rem !important; /* Ajusta o padding dentro dos links */
+  }
+}
+
+/* Estiliza o botão hamburger */
+.navbar-toggler {
+  background-color: #ffffff !important; /* Fundo preto */
+}
+
+
+/* Estiliza o ícone de três linhas para ficarem verdes */
+.navbar-toggler-icon {
+  background-color: #ffffff !important; /* Cor verde para as linhas */
+  border-radius: 2px !important; /* Borda suave para o ícone */
+}
+
+
+
+/* Remove a animação de foco e de ativação */
+.navbar-toggler:focus {
+  outline: none !important; /* Remove a animação de foco */
+  box-shadow: none !important; /* Remove qualquer sombra ao selecionar */
+}
+
+.links {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #000000; /* Links verdes para visibilidade */
+}
+
