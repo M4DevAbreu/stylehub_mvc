@@ -21,9 +21,7 @@
 
   <body>
       <header id="inicio">
-        <?php
-          include_once("includes/headerindex.html");
-        ?>
+        {% include 'includes/headerindex.html' %}
       </header>
     <div class="container shadow" style="--bs-gutter-x: 0">
       
@@ -469,9 +467,7 @@
     </div>
       <div>
         <footer id="final">
-          <?php
-            include_once __DIR__ . '/includes/footer.html';
-          ?>
+          {% include '/includes/footer.html' %}
         </footer>
       </div>
     

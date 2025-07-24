@@ -15,14 +15,14 @@ get('/', function () {
   $controller->index();
 });
 
-get('/users', function () {
+get('/login', function () {
   $controller = new UserController();
-  $controller->list();
+  $controller->formLogin();
 });
 
-get('/users/create', function () {
+post('/login', function () {
   $controller = new UserController();
-  $controller->create();
+  $controller->Login();
 });
 
 post('/users/create', function () {
