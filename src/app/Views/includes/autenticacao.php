@@ -1,13 +1,15 @@
 <?php
-session_start();
-require_once("../config/conexao.php");
 
-if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
-    header("Location: /src/view/cliente/login.php");
-    exit;
+class Autenticacao {
+    public static function proteger() {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION['usuario_id'])) {
+            header('Location: /login');
+            exit;
+        }
+    }
 }
 
-$sql = $pdo->prepare("SELECT * FROM usuarios WHERE id = :id");
-$sql->bindValue(":id", $_SESSION['user_id']);
-$sql->execute();
-$user_logado = $sql->fetch(PDO::FETCH_OBJ);

@@ -2,6 +2,8 @@
 
 use App\Controllers\AppController;
 use App\Controllers\UserController;
+use App\Controllers\HomeController;
+
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/router.php';
@@ -25,34 +27,19 @@ post('/login', function () {
   $controller->Login();
 });
 
-post('/users/create', function () {
+get('/users/cadastro', function () {
   $controller = new UserController();
-  $controller->insert();
+  $controller->formCadastro();
 });
 
-get('/users/$id/update', function ($id) {
+post('/users/cadastro', function () {
   $controller = new UserController();
-  $controller->edit($id);
+  $controller->cadastro();
 });
 
-post('/users/$id/update', function ($id) {
-  $controller = new UserController();
-  $controller->update($id);
-});
-
-get('/users/$id/delete', function ($id) {
-  $controller = new UserController();
-  $controller->confirmDelete($id);
-});
-
-post('/users/$id/delete', function ($id) {
-  $controller = new UserController();
-  $controller->delete($id);
-});
-
-get('/users/$id', function ($id) {
-  $controller = new UserController();
-  $controller->view($id);
+get('/users/inicio', function () {
+  $controller = new HomeController();
+  $controller->homePage();
 });
 
 // For GET or POST
