@@ -12,7 +12,7 @@ class AppController{
         $twig = new Environment($loader);
 
         echo $twig->render("index.html.twig",[
-            "title" => "Página inicial"
+            "title" => "StyleHub"
         ]);
     }
 }

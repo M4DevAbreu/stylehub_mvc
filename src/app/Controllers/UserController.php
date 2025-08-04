@@ -65,7 +65,7 @@ class UserController{
         $twig = new \Twig\Environment($loader);
 
         echo $twig->render('user/teladecadastro.html.twig', [
-            'title' => 'Formulário de cadastro'
+            'title' => 'Cadastro'
 
         ]);
     }
