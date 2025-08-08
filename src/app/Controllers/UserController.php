@@ -40,8 +40,8 @@ class UserController{
                 $_SESSION['nome'] = $usuario ->nome;
                 $_SESSION['tipo_usuario'] = $usuario->tipo_usuario;
 
-                if ($usuario->tipo_usuario === 'gestor' || $usuario->tipo_usuario === 'admin' ) {
-                    header('Location: /telabarbeiro');
+                if ($usuario->tipo_usuario === 'admin' || $usuario->tipo_usuario === 'gestor' ) {
+                    header('Location: /barbearia/home');
                 } else{
                     header('Location: /users/inicio');
                 }
@@ -52,7 +52,7 @@ class UserController{
                 exit;
             }
         } catch (\PDOException $e){
-            echo ('Erro ao fazer login: ' . $e->getMessage());
+            error_log ('Erro ao fazer login: ' . $e->getMessage());
             echo 'Erro interno, tente novamente!';
         }
     
