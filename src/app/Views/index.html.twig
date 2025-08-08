@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,14 +9,15 @@
 
     {% block css %}
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-      <link rel="stylesheet" href="/assets/css/login.css">
-      <link rel="stylesheet" href="/assets/css/footer.css">
-      <link rel="stylesheet" href="/assets/css/headerindex.css">
-      <link rel="stylesheet" href="/assets/css/tema.css">
+      <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+      <link rel="stylesheet" href="/public/assets/css/footer.css">
+      <link rel="stylesheet" href="/public/assets/css/headerindex.css">
+      <link rel="stylesheet" href="/public/assets/css/tema.css">
     {% endblock %}
 
     {% block javascripts %}
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="/public/assets/js/mododark.js"></script>
     {% endblock %}
 
   </head>
@@ -32,7 +33,7 @@
             <div class="position-relative">
               <!-- Imagem de fundo -->
               <img
-                src="assets/images/banner site.jpg"
+                src="/public/assets/images/banner site.jpg"
                 class="img-fluid w-100"
                 alt="Imagem exemplo"
               />
@@ -64,7 +65,7 @@
               >
                 <div class="col-10 col-sm-8 col-lg-6">
                   <img
-                    src="assets/images/cabeleireiro-masculino-preparando-instrumentos-para-o-trabalho-na-barbearia.jpg"
+                    src="/public/assets/images/cabeleireiro-masculino-preparando-instrumentos-para-o-trabalho-na-barbearia.jpg"
                     class="d-block mx-lg-auto img-fluid"
                     alt="Bootstrap Themes"
                     width="700"
@@ -96,7 +97,7 @@
                   <div class="col">
                     <div class="card shadow-sm">
                       <img
-                        src="/assets/images/feche-as-maos-usando-lamina-de-barbear.jpg"
+                        src="/public/assets/images/feche-as-maos-usando-lamina-de-barbear.jpg"
                         class="card-img-top rounded-top"
                         alt=""
                       />
@@ -113,7 +114,7 @@
                   <div class="col">
                     <div class="card shadow-sm">
                       <img
-                        src="/assets/images/barber-faz-barba-de-um-homem-barbudo-em-um-ambiente-vintage.jpg"
+                        src="/public/assets/images/barber-faz-barba-de-um-homem-barbudo-em-um-ambiente-vintage.jpg"
                         class="card-img-top rounded-top"
                         alt=""
                       />
@@ -129,7 +130,7 @@
                   <div class="col">
                     <div class="card shadow-sm">
                       <img
-                        src="/assets/images/close-up-de-um-cabeleireiro-mao-com-pente-corte-cabelo-homem-com-tesouras.jpg"
+                        src="/public/assets/images/close-up-de-um-cabeleireiro-mao-com-pente-corte-cabelo-homem-com-tesouras.jpg"
                         class="card-img-top rounded-top"
                         alt=""
                       />
@@ -145,7 +146,7 @@
                   <div class="col">
                     <div class="card shadow-sm">
                       <img
-                        src="/assets/images/elegante-homem-sentado-em-uma-barbearia.jpg"
+                        src="/public/assets/images/elegante-homem-sentado-em-uma-barbearia.jpg"
                         class="card-img-top rounded-top"
                         alt=""
                       />
@@ -161,7 +162,7 @@
                   <div class="col">
                     <div class="card shadow-sm">
                       <img
-                        src="/assets/images/retrato-de-irmaos-ao-ar-livre-durante-uma-sessao-de-corte-de-cabelo.jpg"
+                        src="/public/assets/images/retrato-de-irmaos-ao-ar-livre-durante-uma-sessao-de-corte-de-cabelo.jpg"
                         class="card-img-top rounded-top"
                         alt=""
                       />
@@ -177,7 +178,7 @@
                   <div class="col">
                     <div class="card shadow-sm">
                       <img
-                        src="/assets/images/vista-lateral-cliente-cortando-o-cabelo.jpg"
+                        src="/public/assets/images/vista-lateral-cliente-cortando-o-cabelo.jpg"
                         class="card-img-top rounded-top"
                         alt=""
                       />
@@ -199,7 +200,7 @@
             <div class="px-4 py-4 my-3 text-center">
               <img
                 class="d-block mx-auto mb-4"
-                src="/assets/images/logotipoHorizontal.png"
+                src="/public/assets/images/logotipoHorizontal.png"
                 alt=""
                 width="200"
                 height="auto"
@@ -258,7 +259,7 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img
-                    src="/assets/images/elegante-homem-sentado-em-uma-barbearia.jpg"
+                    src="/public/assets/images/elegante-homem-sentado-em-uma-barbearia.jpg"
                     width="100%"
                     alt=""
                   />
@@ -266,7 +267,7 @@
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="/assets/images/barber-faz-barba-de-um-homem-barbudo-em-um-ambiente-vintage.jpg"
+                    src="/public/assets/images/barber-faz-barba-de-um-homem-barbudo-em-um-ambiente-vintage.jpg"
                     width="100%"
                     alt=""
                   />
@@ -274,7 +275,7 @@
                 </div>
                 <div class="carousel-item">
                   <img
-                    src="/assets/images/close-up-de-um-cabeleireiro-mao-com-pente-corte-cabelo-homem-com-tesouras.jpg"
+                    src="/public/assets/images/close-up-de-um-cabeleireiro-mao-com-pente-corte-cabelo-homem-com-tesouras.jpg"
                     width="100%"
                     alt=""
                   />
@@ -313,7 +314,7 @@
               <div class="row">
                 <div class="col-lg-4 text-center">
                   <img
-                    src="/assets/images/douglas.jpeg"
+                    src="/public/assets/images/douglas.jpeg"
                     class="bd-placeholder-img rounded-circle"
                     width="140"
                     height="140"
@@ -336,7 +337,7 @@
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                   <img
-                    src="/assets/images/matheus.jpeg"
+                    src="/public/assets/images/matheus.jpeg"
                     class="bd-placeholder-img rounded-circle"
                     width="140"
                     height="140"
@@ -359,7 +360,7 @@
                 <!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                   <img
-                    src="/assets/images/arthur.jpeg"
+                    src="/public/assets/images/arthur.jpeg"
                     class="bd-placeholder-img rounded-circle"
                     width="140"
                     height="140"
@@ -474,6 +475,5 @@
       </div>
     
     </div>
-    <script src="./../assets/js/mododark.js"></script>
   </body>
 </html>

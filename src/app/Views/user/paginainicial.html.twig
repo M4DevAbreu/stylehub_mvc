@@ -1,24 +1,21 @@
 {% extends "Base.html.twig" %}
 
-{% block title %}
-    <title>{{ title }}</title>
-{% endblock %}
-
 {% block css %}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-  <link rel="stylesheet" href="/assets/css/paginainicial.css">
+  <link rel="stylesheet" href="/pubic/assets/css/paginainicial.css">
 {% endblock %}
 
 {% block javascripts %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/assets/js/mododark.js"></script>
 {% endblock %}
 
 {% block main %}
-
-  <p id="saudacao" class="texto-tema-adaptavel text-center mt-3">
-    Tudo beleza, {{ nome }}
-  </p>
+  
+  <h1 class="mb-2 mb-sm-0 fw-semibold">
+  Tudo beleza, <span class="text-success fw-bold"> {{ nome }}? </span>
+  </h1>
 
   <div class="container py-4 d-flex flex-column flex-md-row justify-content-between">
     <div id="calendar" class="mb-4 flex-grow-1">

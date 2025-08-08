@@ -3,11 +3,16 @@
 use App\Controllers\AppController;
 use App\Controllers\UserController;
 use App\Controllers\HomeController;
+use App\Controllers\ContatoController;
 
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/router.php';
 
+
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 // ##################################################
 // Rotas elaboradas utilizando a biblioteca PHPRouter - https://phprouter.com/
 // ##################################################
@@ -41,6 +46,18 @@ get('/users/inicio', function () {
   $controller = new HomeController();
   $controller->homePage();
 });
+
+get('/contato', function () {
+  $controller = new ContatoController();
+  $controller->formContato();
+});
+
+post('/contato', function () {
+  $controller = new ContatoController();
+  $controller->contato();
+});
+
+
 
 // For GET or POST
 // The 404.php which is inside the views folder will be called

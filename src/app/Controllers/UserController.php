@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
-use App\Models\BD;
 use App\Models\User;
 
 use PDO; 
@@ -53,7 +52,7 @@ class UserController{
                 exit;
             }
         } catch (\PDOException $e){
-            error_log('Erro ao fazer login: ' . $e->getMessage());
+            echo ('Erro ao fazer login: ' . $e->getMessage());
             echo 'Erro interno, tente novamente!';
         }
     

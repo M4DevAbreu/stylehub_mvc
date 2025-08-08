@@ -3,16 +3,15 @@ namespace App\Controllers;
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
+use App\Controllers\AppController;
+
 
 class HomeController{
 
     public function homePage(){
 
-        if (!isset($_SESSION['usuario_id']) || $_SESSION['tipo_usuario'] !== 'cliente') {
-            header('Location: /login');
-            exit;
-        }
-
+        AppController::protegerTipo('cliente');
+        
         $loader = new \Twig\loader\FilesystemLoader(__DIR__ . "/../Views");
 
         $twig = new \Twig\Environment($loader);

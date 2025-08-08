@@ -5,7 +5,11 @@ services:
       - ./src:/var/www/html
     ports:
       - 8080:80
-
+    networks:
+      - rabbitmq_network
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      
   db:
     image: mysql
     restart: always
@@ -13,6 +17,8 @@ services:
       - 9306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
+    networks:
+      - rabbitmq_network
 
   phpmyadmin:
     image: phpmyadmin
@@ -21,3 +27,10 @@ services:
       - 8081:80
     environment:
       - PMA_ARBITRARY=1
+    networks:
+      - rabbitmq_network
+
+networks:
+  rabbitmq_network:
+    external: true
+   
