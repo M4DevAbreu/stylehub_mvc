@@ -34,8 +34,8 @@ main {
 
 .btntestcor {
   background-color: #00C781;
+  color: black !important;
   border: none;
-  color: white;
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
@@ -44,5 +44,6 @@ main {
 }
 
 .btntestcor:hover {
-  background-color: #34a500;
+  background-color: #000 !important; /* Cor de fundo no hover */
+  color: #00E997 !important; /* Cor do texto no hover */
 }

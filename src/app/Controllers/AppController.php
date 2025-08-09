@@ -8,13 +8,16 @@ use App\Models\User;
 
 class AppController {
 
-    public static function protegerTipo($tipoEsperado) {
-
-        if (!isset($_SESSION['usuario_id']) || $_SESSION['tipo_usuario'] !== $tipoEsperado) {
-            header('Location: /login');
-            exit;
-        }
+    public static function protegerTipo(...$tiposEsperados) {
+    if (
+        !isset($_SESSION['usuario_id']) || 
+        !in_array($_SESSION['tipo_usuario'], $tiposEsperados)
+    ) {
+        header('Location: /login');
+        exit;
     }
+}
+
 
     public function index() {
         $loader = new FilesystemLoader(__DIR__ . "/../Views");
