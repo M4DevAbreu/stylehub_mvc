@@ -8,13 +8,10 @@ use App\Controllers\BarbeiroController;
 use App\Controllers\EstoqueController;
 use App\Controllers\LogoutController;
 use App\Controllers\NotificacoesController;
-<<<<<<< HEAD
 use App\Controllers\HistoricoController;
 use App\Controllers\PerfilController;
 
-=======
 use App\Controllers\AgendamentoController;
->>>>>>> e082f3978c80867093d811d209cf340ee6409c91
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/router.php';
@@ -99,7 +96,6 @@ get('/barbearia/notificacoes', function () {
     (new NotificacoesController())->notificacoesBarbeiro();
 });
 
-<<<<<<< HEAD
 get('/users/historico', function () {
   $controller = new HistoricoController();
   $controller->historicoClientes();
@@ -111,8 +107,6 @@ get('/users/perfil', function () {
 });
 
 
-=======
-// 📌 Agendamentos
 post('/agendamento/confirmar/$id', function ($id) {
     (new AgendamentoController())->confirmar((int)$id);
 });
@@ -122,7 +116,6 @@ post('/agendamento/recusar/$id', function ($id) {
 post('/agendamento/salvar', function () {
     (new AgendamentoController())->salvar();
 });
->>>>>>> e082f3978c80867093d811d209cf340ee6409c91
 
 // 404
 any('/404', 'views/404.php');
