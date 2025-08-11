@@ -1,5 +1,7 @@
 #calendar {
   width: 100%;
+  max-width: 600px; /* limita o tamanho no desktop */
+  margin: 0 auto; /* centraliza */
   background-color: #000000;
   padding: 15px;
   border-radius: 10px;
@@ -10,19 +12,13 @@
 
 .calendar-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* espaça as setas nas extremidades */
   align-items: center;
   font-size: 18px;
   font-weight: 600;
-  padding: 5px;
 }
 
-.month-picker-nav {
-  display: flex;
-  align-items: center;
-}
-
-.month-change {
+.nav-btn {
   cursor: pointer;
   padding: 5px;
 }
