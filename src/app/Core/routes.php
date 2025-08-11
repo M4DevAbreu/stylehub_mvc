@@ -6,8 +6,8 @@ use App\Controllers\HomeController;
 use App\Controllers\ContatoController;
 use App\Controllers\BarbeiroController;
 use App\Controllers\EstoqueController;
-
 use App\Controllers\LogoutController;
+use App\Controllers\NotificacoesController;
 
 
 require_once __DIR__ . '/../../vendor/autoload.php';
@@ -105,6 +105,16 @@ get('/estoque/excluir/$id', function($id) {
 get('/sair', function () {
   $controller = new LogoutController();
   $controller->sair();
+});
+
+get('/users/notificacoes', function () {
+  $controller = new NotificacoesController();
+  $controller->notificacoesClientes();
+});
+
+get('/barbearia/notificacoes', function () {
+  $controller = new NotificacoesController();
+  $controller->notificacoesBarbeiro();
 });
 
 

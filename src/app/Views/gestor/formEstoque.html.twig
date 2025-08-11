@@ -1,17 +1,17 @@
 {% extends "BaseBarbeiro.html.twig" %}
 
-{% block title %}
-  <title>{{ title }}</title>
-{% endblock %}
-
 {% block css %}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="/assets/css/controleestoque.css" />
+  <link rel="stylesheet" href="/public/assets/css/controleestoque.css" />
+{% endblock %}
+
+{% block javascripts %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/public/assets/js/mododark.js"></script>
 {% endblock %}
 
 {% block main %}
-<div class="container shadow">
   <main class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-4 flex-column flex-sm-row text-center text-sm-start">
       <h5 class="mb-2 mb-sm-0 fw-semibold">{{ title }}</h5>
@@ -63,5 +63,4 @@
       </div>
     </form>
   </main>
-</div>
 {% endblock %}

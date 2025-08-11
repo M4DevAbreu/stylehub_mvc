@@ -1,0 +1,72 @@
+/* contato.css */
+
+/* Ajuste do container principal */
+.form-container {
+  max-width: 550px;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Título */
+.form-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Texto explicativo */
+.form-container p {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Campos do formulário */
+.form-control {
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 0.15rem rgba(40, 167, 69, 0.25);
+}
+
+/* Botão de envio */
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+  .form-title {
+    font-size: 1.4rem;
+  }
+
+  .form-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
