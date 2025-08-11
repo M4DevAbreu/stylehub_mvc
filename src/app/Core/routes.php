@@ -4,6 +4,7 @@ use App\Controllers\AppController;
 use App\Controllers\UserController;
 use App\Controllers\HomeController;
 use App\Controllers\ContatoController;
+use App\Controllers\LogoutController;
 
 
 require_once __DIR__ . '/../../vendor/autoload.php';
@@ -55,6 +56,11 @@ get('/contato', function () {
 post('/contato', function () {
   $controller = new ContatoController();
   $controller->contato();
+});
+
+get('/sair', function () {
+  $controller = new LogoutController();
+  $controller->sair();
 });
 
 
