@@ -4,6 +4,9 @@ use App\Controllers\AppController;
 use App\Controllers\UserController;
 use App\Controllers\HomeController;
 use App\Controllers\ContatoController;
+use App\Controllers\BarbeiroController;
+use App\Controllers\EstoqueController;
+
 use App\Controllers\LogoutController;
 
 
@@ -56,11 +59,6 @@ get('/contato', function () {
 post('/contato', function () {
   $controller = new ContatoController();
   $controller->contato();
-});
-
-get('/sair', function () {
-  $controller = new LogoutController();
-  $controller->sair();
 });
 
 

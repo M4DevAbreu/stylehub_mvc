@@ -1,0 +1,67 @@
+{% extends "BaseBarbeiro.html.twig" %}
+
+{% block title %}
+  <title>{{ title }}</title>
+{% endblock %}
+
+{% block css %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/assets/css/controleestoque.css" />
+{% endblock %}
+
+{% block main %}
+<div class="container shadow">
+  <main class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-column flex-sm-row text-center text-sm-start">
+      <h5 class="mb-2 mb-sm-0 fw-semibold">{{ title }}</h5>
+      <a href="/estoque" class="btn btn-secondary">Voltar</a>
+    </div>
+
+    <form action="{{ acao }}" method="post" class="row g-3">
+      <div class="col-12">
+        <label for="nome" class="form-label">Nome do item</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          name="nome"
+          placeholder="Nome do item"
+          value="{{ item.nome|default('') }}"
+          required
+        />
+      </div>
+
+      <div class="col-12">
+        <label for="quantidade" class="form-label">Quantidade</label>
+        <input
+          type="number"
+          class="form-control"
+          id="quantidade"
+          name="quantidade"
+          placeholder="Quantidade"
+          min="0"
+          value="{{ item.quantidade|default('0') }}"
+          required
+        />
+      </div>
+
+      <div class="col-12">
+        <label for="validade" class="form-label">Data de validade</label>
+        <input
+          type="date"
+          class="form-control"
+          id="validade"
+          name="validade"
+          value="{{ item.validade|default('') }}"
+        />
+      </div>
+
+      <div class="col-12 d-flex gap-2">
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <a href="/estoque" class="btn btn-secondary">Cancelar</a>
+      </div>
+    </form>
+  </main>
+</div>
+{% endblock %}
