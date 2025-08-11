@@ -8,6 +8,8 @@ use App\Controllers\BarbeiroController;
 use App\Controllers\EstoqueController;
 use App\Controllers\LogoutController;
 use App\Controllers\NotificacoesController;
+use App\Controllers\HistoricoController;
+use App\Controllers\PerfilController;
 
 
 require_once __DIR__ . '/../../vendor/autoload.php';
@@ -116,6 +118,17 @@ get('/barbearia/notificacoes', function () {
   $controller = new NotificacoesController();
   $controller->notificacoesBarbeiro();
 });
+
+get('/users/historico', function () {
+  $controller = new HistoricoController();
+  $controller->historicoClientes();
+});
+
+get('/users/perfil', function () {
+  $controller = new PerfilController();
+  $controller->perfilClientes();
+});
+
 
 
 // For GET or POST
