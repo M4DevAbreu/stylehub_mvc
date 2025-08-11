@@ -5,6 +5,7 @@ use App\Controllers\UserController;
 use App\Controllers\HomeController;
 use App\Controllers\ContatoController;
 use App\Controllers\BarbeiroController;
+use App\Controllers\EstoqueController;
 
 
 
@@ -63,6 +64,43 @@ get('/barbearia/home', function () {
       $controller = new BarbeiroController();
       $controller->homeBarbeiro();
   });
+
+  get('/estoque', function() {
+    $controller = new EstoqueController();
+    $controller->index();
+});
+
+// FORMULÁRIO DE NOVO ITEM
+get('/estoque/novo', function () {
+    $controller = new EstoqueController();
+    $controller->formNovo();
+});
+
+// SALVAR NOVO ITEM
+post('/estoque/novo', function () {
+    $controller = new EstoqueController();
+    $controller->salvarNovo();
+});
+
+// FORMULÁRIO DE EDIÇÃO
+get('/estoque/editar/$id', function ($id) {
+    $controller = new EstoqueController();
+    $controller->formEditar((int)$id);
+});
+
+// ATUALIZAR ITEM EDITADO
+post('/estoque/editar/$id', function ($id) {
+    $controller = new EstoqueController();
+    $controller->atualizar((int)$id);
+});
+
+// Rota para excluir item do estoque por id
+get('/estoque/excluir/$id', function($id) {
+    $controller = new EstoqueController();
+    $controller->excluir($id);
+});
+
+
 
 // For GET or POST
 // The 404.php which is inside the views folder will be called
