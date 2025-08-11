@@ -58,8 +58,13 @@
 }
 
 .selected {
-  background-color: #00cc99;
-  color: #000000;
+  background-color: #00cc99 !important;
+  color: #000000 !important;
+}
+
+#horarios {
+  max-width: 300px;
+  overflow-y: auto;
 }
 
 .horario-btn {
@@ -73,13 +78,29 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
+.horario-btn:hover {
+  background-color: #00b386;
+}
+
 .selected-horario {
-  background-color: #009973;
-  color: #ffffff;
+  background-color: #009973 !important;
+  color: #ffffff !important;
 }
 
 .valor-servico {
   display: block;
   font-size: 14px;
   color: #00cc99;
+}
+
+.icon-servico {
+  background: #111;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.icon-servico input {
+  margin-bottom: 5px;
 }

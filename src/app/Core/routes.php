@@ -8,117 +8,98 @@ use App\Controllers\BarbeiroController;
 use App\Controllers\EstoqueController;
 use App\Controllers\LogoutController;
 use App\Controllers\NotificacoesController;
+<<<<<<< HEAD
 use App\Controllers\HistoricoController;
 use App\Controllers\PerfilController;
 
+=======
+use App\Controllers\AgendamentoController;
+>>>>>>> e082f3978c80867093d811d209cf340ee6409c91
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once __DIR__ . '/router.php';
 
-
 if (session_status() === PHP_SESSION_NONE) {
-  session_start();
+    session_start();
 }
+
 // ##################################################
-// Rotas elaboradas utilizando a biblioteca PHPRouter - https://phprouter.com/
+// Rotas utilizando PHPRouter - https://phprouter.com/
 // ##################################################
 
+// Página inicial
 get('/', function () {
-  $controller = new AppController();
-  $controller->index();
+    (new AppController())->index();
 });
 
+// Login
 get('/login', function () {
-  $controller = new UserController();
-  $controller->formLogin();
+    (new UserController())->formLogin();
 });
-
 post('/login', function () {
-  $controller = new UserController();
-  $controller->Login();
+    (new UserController())->login();
 });
 
+// Cadastro de usuário
 get('/users/cadastro', function () {
-  $controller = new UserController();
-  $controller->formCadastro();
+    (new UserController())->formCadastro();
 });
-
 post('/users/cadastro', function () {
-  $controller = new UserController();
-  $controller->cadastro();
+    (new UserController())->cadastro();
 });
 
+// Página inicial do usuário
 get('/users/inicio', function () {
-  $controller = new HomeController();
-  $controller->homePage();
+    (new HomeController())->homePage();
 });
 
+// Contato
 get('/contato', function () {
-  $controller = new ContatoController();
-  $controller->formContato();
+    (new ContatoController())->formContato();
 });
-
 post('/contato', function () {
-  $controller = new ContatoController();
-  $controller->contato();
+    (new ContatoController())->contato();
 });
 
+// Página inicial do barbeiro
 get('/barbearia/home', function () {
-      $controller = new BarbeiroController();
-      $controller->homeBarbeiro();
-  });
-
-  get('/estoque', function() {
-    $controller = new EstoqueController();
-    $controller->index();
+    (new BarbeiroController())->homeBarbeiro();
 });
 
-// FORMULÁRIO DE NOVO ITEM
+// Estoque
+get('/estoque', function () {
+    (new EstoqueController())->index();
+});
 get('/estoque/novo', function () {
-    $controller = new EstoqueController();
-    $controller->formNovo();
+    (new EstoqueController())->formNovo();
 });
-
-// SALVAR NOVO ITEM
 post('/estoque/novo', function () {
-    $controller = new EstoqueController();
-    $controller->salvarNovo();
+    (new EstoqueController())->salvarNovo();
 });
-
-// FORMULÁRIO DE EDIÇÃO
 get('/estoque/editar/$id', function ($id) {
-    $controller = new EstoqueController();
-    $controller->formEditar((int)$id);
+    (new EstoqueController())->formEditar((int)$id);
 });
-
-// ATUALIZAR ITEM EDITADO
 post('/estoque/editar/$id', function ($id) {
-    $controller = new EstoqueController();
-    $controller->atualizar((int)$id);
+    (new EstoqueController())->atualizar((int)$id);
+});
+get('/estoque/excluir/$id', function ($id) {
+    (new EstoqueController())->excluir((int)$id);
 });
 
-// Rota para excluir item do estoque por id
-get('/estoque/excluir/$id', function($id) {
-    $controller = new EstoqueController();
-    $controller->excluir($id);
-});
-
-
+// Logout
 get('/sair', function () {
-  $controller = new LogoutController();
-  $controller->sair();
+    (new LogoutController())->sair();
 });
 
+// Notificações
 get('/users/notificacoes', function () {
-  $controller = new NotificacoesController();
-  $controller->notificacoesClientes();
+    (new NotificacoesController())->notificacoesClientes();
 });
-
 get('/barbearia/notificacoes', function () {
-  $controller = new NotificacoesController();
-  $controller->notificacoesBarbeiro();
+    (new NotificacoesController())->notificacoesBarbeiro();
 });
 
+<<<<<<< HEAD
 get('/users/historico', function () {
   $controller = new HistoricoController();
   $controller->historicoClientes();
@@ -130,8 +111,18 @@ get('/users/perfil', function () {
 });
 
 
+=======
+// 📌 Agendamentos
+post('/agendamento/confirmar/$id', function ($id) {
+    (new AgendamentoController())->confirmar((int)$id);
+});
+post('/agendamento/recusar/$id', function ($id) {
+    (new AgendamentoController())->recusar((int)$id);
+});
+post('/agendamento/salvar', function () {
+    (new AgendamentoController())->salvar();
+});
+>>>>>>> e082f3978c80867093d811d209cf340ee6409c91
 
-// For GET or POST
-// The 404.php which is inside the views folder will be called
-// The 404.php has access to $_GET and $_POST
+// 404
 any('/404', 'views/404.php');
