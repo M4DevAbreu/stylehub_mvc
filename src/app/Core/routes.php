@@ -4,6 +4,8 @@ use App\Controllers\AppController;
 use App\Controllers\UserController;
 use App\Controllers\HomeController;
 use App\Controllers\ContatoController;
+use App\Controllers\BarbeiroController;
+
 
 
 require_once __DIR__ . '/../../vendor/autoload.php';
@@ -57,6 +59,10 @@ post('/contato', function () {
   $controller->contato();
 });
 
+get('/barbearia/home', function () {
+      $controller = new BarbeiroController();
+      $controller->homeBarbeiro();
+  });
 
 // For GET or POST
 // The 404.php which is inside the views folder will be called

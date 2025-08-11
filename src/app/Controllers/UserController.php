@@ -40,7 +40,7 @@ class UserController{
                 $_SESSION['nome'] = $usuario ->nome;
                 $_SESSION['tipo_usuario'] = $usuario->tipo_usuario;
 
-                if ($usuario->tipo_usuario === 'admin' || $usuario->tipo_usuario === 'gestor' ) {
+                if ($usuario->tipo_usuario === 'gestor' || $usuario->tipo_usuario === 'admin' ) {
                     header('Location: /barbearia/home');
                 } else{
                     header('Location: /users/inicio');
